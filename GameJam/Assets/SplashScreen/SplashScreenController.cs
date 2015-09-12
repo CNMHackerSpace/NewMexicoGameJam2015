@@ -23,7 +23,6 @@ public class SplashScreenController : MonoBehaviour {
     {
         this.gameObject.SetActive(false);
         gameScreen.gameObject.SetActive(true);
-        status.text = "Clicked!";
     }
 
 }
