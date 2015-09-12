@@ -9,8 +9,21 @@ public class Controller : MonoBehaviour {
 	// Use this for initialization
     public InputField stb;
     public InputField atb;
+    public Button iAmBtn;
+    public Button iAmNotBtn;
+
 	void Start () {
 	//TextAreaAttribute.text = "";
+      /*  string[] lines = System.IO.FileShare.ReadAllLines("Scenes.text");
+        Scene[] scenes = new Scene[lines.Length];
+        for(int i = 0; i < lines.Length; i++)
+        {
+            Scene scene = new Scene();
+            scene.ActorID = 1;
+            scene.Description ="test";
+         //   scene.ActorId2 = 2;
+            scenes[i] = scene;
+        */
      
 	}
 	
@@ -41,26 +54,42 @@ public class Controller : MonoBehaviour {
 
     public void buttonIam()
     {
-       // if()//)
-       // {
+        bool t = true;//T will equal true 
+        bool f = false;//f will equal false
+        int addOne;
+        int subtractOne;
+        if (t)
+        {
+            addOne = 1;
+        }
+        else
+        {
+            subtractOne = -1;
         
-     // /  
-     //   }
-
-
+        }
 
     }
 
     public void buttonIamNot()
-    { 
-    
-    
-    
+    {
+        bool t = true;//T will equal true 
+        bool f = false;//f will equal false
+        int addOne;
+        int subtractOne;
+        if (t)
+        {
+            addOne = 1;
+        }
+        else
+        {
+            subtractOne = -1;
+
+        }
     }
 
-    public void calcScore()
+    public void calcScore()//calc score will take the values from the buttons and 
     { 
-    
+    //How can I get the total values from the buttons?
     
     }
 
