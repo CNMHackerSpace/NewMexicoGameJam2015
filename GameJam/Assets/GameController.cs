@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour {
 
     public GameController()
     {
-        Score = 5;
+        Score = 0;
     }
     
 }
