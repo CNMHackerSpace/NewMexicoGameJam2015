@@ -10,20 +10,28 @@ public class EndOfGameScreenController : MonoBehaviour {
     string[] lines;
 
 	// Use this for initialization
-    void Start() {
-        //read in text file
-        lines = System.IO.File.ReadAllLines(@"..\GameJam\Assets\EndOfGameScreen\TrajicDeaths.txt");
-        SetResulText();
+    void Start() {        
     }
    
     void OnEnable(){
+        //Only read file one time
+        if (lines == null)
+        {
+            GetDeaths();
+        }
         SetResulText();
+	}
+
+    void GetDeaths()
+    {
+		TextAsset trajicDeaths = Resources.Load("TrajicDeaths") as TextAsset;
+		lines = trajicDeaths.text.Split('\n');
 	}
 
     void SetResulText()
     {
         //randomly select a line
-        string death = lines[Random.Range(0, lines.Length)];
+        string death = lines[Random.Range(0, lines.Length-1)];
 
         //display results
         txtScore.text =
@@ -39,6 +47,8 @@ public class EndOfGameScreenController : MonoBehaviour {
 
     public void PlayAgain()
     {
+		//Reset score
+		gc.Score = 0;
         this.gameObject.SetActive(false);
         gameScreen.gameObject.SetActive(true);
     }
