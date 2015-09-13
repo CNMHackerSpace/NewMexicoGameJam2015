@@ -1155,10 +1155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfe332f7ab96554890440808c3a6cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stb: {fileID: 34317743}
-  atb: {fileID: 1368142290}
-  iAmBtn: {fileID: 0}
-  iAmNotBtn: {fileID: 0}
+  sceneTexBox: {fileID: 34317743}
+  actorsTexBox: {fileID: 1368142290}
+  iAmBtn: {fileID: 919751414}
+  iAmNotBtn: {fileID: 50694586}
+  gameController: {fileID: 0}
+  endOfGameScreen: {fileID: 0}
 --- !u!1 &1123524477
 GameObject:
   m_ObjectHideFlags: 0
